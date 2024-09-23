@@ -1,0 +1,18 @@
+<ul>
+    {% if user.user_type == 'admin' %}
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Add</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+    {% elif user.user_type == 'viewer' %}
+      <li><a href="{% url 'jobFeddPage' %}">Job Feed</a></li>
+
+    {% endif %}
+    
+    
+
+  </ul>
